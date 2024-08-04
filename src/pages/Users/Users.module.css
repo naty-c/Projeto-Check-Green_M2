@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+}
+
+.usersContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cbcae0;
+    background: url('./src/assets/boarding3.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.usersContainer h1 {
+    color: #586fdf;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.usersContainer p {
+    color: #586fdf;
+    font-style: italic;
+    margin-bottom: 20px;
+}

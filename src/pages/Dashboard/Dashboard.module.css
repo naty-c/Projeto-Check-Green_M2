@@ -1,0 +1,70 @@
+.dashboardContainer {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.mainContent h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    color: #586fdf;
+    text-align: left;
+    margin-left: 300px;
+}
+  
+.mainContent p {
+    margin-top: 10px;
+    margin-left: 300px;
+    text-align: left;
+    color: #586fdf;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 300px;
+    gap: 30px;
+}
+
+.cardUsers {
+    background: #b65987;
+    width: 350px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.cardUsers h2,
+.cardPlaces h2 {
+    color: #cbcae0;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.cardPlaces {
+    background: #b65987;
+    width: 350px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.listContainer h3 {
+    color: #586fdf;
+    font-family: "Josefin Sans", sans-serif;
+    margin-left: 300px;
+    text-align: left;
+}
