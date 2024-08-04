@@ -5,6 +5,7 @@ import getAddressFromCep from '../../service/addressService';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { Plane } from 'lucide-react';
 import styles from './Places.module.css';
+import axios from 'axios';
 
 function Places() {
   const [successMessage, setSuccessMessage] = useState('');
@@ -17,11 +18,19 @@ function Places() {
 
   async function onSubmit(data) {
     console.log(data);
-    setSuccessMessage('Place successfully added!');
-    setTimeout(() => {
-      navigate('/dashboard');
-    }, 2000); // Redirect after 2 seconds
+
+    try {
+      await axios.post('http://localhost:3000/places', data); // Add a new place to db.json
+      setSuccessMessage('Place successfully added!');
+      alert('Place successfully added!');
+      setTimeout(() => {
+          navigate('/dashboard');
+      }, 2000); // Redirect after 2 seconds
+  } catch (error) {
+      console.error('Error adding place', error.response ? error.response.data : error.message);
+      alert('Failed to add place');
   }
+}
 
   async function handleCep(e) {
     const cep = e.target.value.replace(/\D/g, '');
