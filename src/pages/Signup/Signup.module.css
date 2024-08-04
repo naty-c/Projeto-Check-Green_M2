@@ -1,0 +1,138 @@
+.signupContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #cbcae0;
+    background: url('./src/assets/boarding.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #586fdf;
+    height: 100vh;
+    border-right: 5px dashed #cbcae0;
+}
+  
+.left h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #cbcae0;
+    text-shadow: 0 0 20px #b65987;
+    font-family: "Josefin Sans", sans-serif;
+}
+  
+.left form {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.leftSignupForm,
+.rightSignupForm {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.signupGroup {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 20px;
+}
+  
+.signupContainer label {
+    margin: 10px 0 5px;
+    color: #cbcae0;
+    font-family: "Josefin Sans", sans-serif;
+}
+  
+.signupContainer input {
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    background: #cbcae0;
+    color: #b65987;
+    border: 1px solid #cbcae0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 5px;
+        &::placeholder {
+            color: #586fdf;
+            font-style: italic;
+        }
+}
+
+.signupContainer input:focus {
+    border-color: #b65987;
+    box-shadow: 0 0 4px 2px #b65987;
+}
+  
+.signupButton {
+    display: block;
+    padding: 15px 50px;
+    background-color: #b65987;
+    color: #cbcae0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signupButton:hover, 
+.signupButton:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 20px transparent;
+}
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #b65987; }
+  }
+
+p {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #cbcae0;
+    gap: 5px;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.link {
+    text-decoration: none;
+    color: #cbcae0;
+    cursor: pointer;
+    &:hover,
+    &:focus{
+    color: #b65987;
+    }
+    &:active{
+    color: #b65987;
+    }
+}
+
+.error {
+    color: #cbcae0;
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 5px 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: italic;
+}  
+
+
+  
