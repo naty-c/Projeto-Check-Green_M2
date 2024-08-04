@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
 import Signup from '../pages/Signup/Signup';
 import Login from '../pages/Login/Login';
 import Dashboard from '../pages/Dashboard/Dashboard';
@@ -11,16 +12,16 @@ function AppRoutes() {
             {/* Public Routes */}
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />}/>
+            {/* <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/users" element={<Users />} />
-            <Route path="/places" element={<Places />} />
+            <Route path="/places" element={<Places />} /> */}
 
             {/* Private Routes */}
-            {/* <Route element={<PrivateRoute />}>
+            <Route element={<PrivateRoute />}>
                 <Route path="/dashboard" element={<Dashboard />}/>
                 <Route path="/users" element={<Users />} />
                 <Route path="/places" element={<Places />} />
-            </Route> */}
+            </Route>
         </Routes>
     )
 } 

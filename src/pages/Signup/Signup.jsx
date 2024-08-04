@@ -3,8 +3,10 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { z } from "zod";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { validateUser } from '../../service/userValidate';
 import getAddressFromCep from '../../service/addressService';
 import styles from './Signup.module.css';
+import axios from 'axios';
 
 // Validation with Zod
 const schema = z.object({
@@ -26,28 +28,51 @@ const schema = z.object({
           .length(11, { message: 'CPF must be 11 numbers' })
           .refine(value => /^\d+$/.test(value), { message: 'CPF must have a valid format' }),
           address: z.string()
-          .nonempty({ message: 'CEP is required' })
-          .refine(value => /^\d{8}$/.test(value), { message: 'CEP must have 8 digits' }),
+          .nonempty({ message: 'CEP is required' }),
     phone: z.string()
           .nonempty({ message: 'Phone number is required' })
           .refine(value => /^[\d\s\+\-\(\)]+$/.test(value), { message: 'Invalid phone number' }),
   });  
 
 function Signup() {
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm({
+  const { register, handleSubmit, setValue, setError, formState: { errors } } = useForm({
     resolver: zodResolver(schema),
   });
+
+  const [generalError, setGeneralError] = useState('');
 
   const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
   async function onSubmit(data) {
     console.log(data);
-    setSuccessMessage('Successfully onboard');
-    setTimeout(() => {
+
+    const validationErrors = await validateUser(data);
+
+    if (Object.keys(validationErrors).length > 0) {
+      if (validationErrors.email) {
+        setError('email', { type: 'manual', message: validationErrors.email });
+      }
+      if (validationErrors.cpf) {
+        setError('cpf', { type: 'manual', message: validationErrors.cpf });
+      }
+      if (validationErrors.generalError) {
+        setGeneralError(validationErrors.generalError);
+      }
+      return;
+    }
+
+    try {
+      await axios.post('http://localhost:3000/users', data); // Add a new user to db.json
+      setSuccessMessage('User successfully onboard!');
+      alert('User successfully onboard!');
       navigate('/');
-    }, 2000); // Redirect after 2 seconds
+  } catch (error) {
+      console.error('Error registering user', error.response ? error.response.data : error.message);
+      setGeneralError('Failed to register user', error);
+      alert('Failed to register user');
   }
+}
 
   async function handleCep(e) {
     const cep = e.target.value.replace(/\D/g, ''); // Remove any non-digit characters

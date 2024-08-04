@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { z } from "zod";
 import { zodResolver } from '@hookform/resolvers/zod';
 import styles from './Login.module.css';
+import { useAuth } from '../../contexts/Auth';
 
 const schema = z.object({
     email: z.string().email('Invalid email address'),
@@ -10,12 +11,20 @@ const schema = z.object({
 });
 
 function Login() {
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
     resolver: zodResolver(schema),
 });
 
   async function onSubmit(data) {
     console.log(data);
+    try {
+      await signIn(data);
+      navigate('/dashboard');
+    } catch (error) {
+      alert(error.message || 'Login failed')
+    }
 }
 
   return (

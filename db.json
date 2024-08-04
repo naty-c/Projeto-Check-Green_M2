@@ -1,86 +1,133 @@
 {
-    "users": [
-        {
-            "name": "Altria",
-            "email": "altria@email.com",
-            "password": "altriapass",
-            "gender": "Female",
-            "birthday": "2001-01-01",
-            "CPF": "12345678900",
-            "address": "11111-111",
-            "phone": "4811111111"
-        },
-        {
-            "name": "Emiya",
-            "email": "emiya@email.com",
-            "password": "emiyapass",
-            "gender": "Male",
-            "birthday": "2002-02-02",
-            "CPF": "22222222222",
-            "address": "22222-222",
-            "phone": "4822222222"
-        },
-        {
-            "name": "Gilgamesh",
-            "email": "gilgamesh@email.com",
-            "password": "gilgameshpass",
-            "gender": "Male",
-            "birthday": "2003-03-03",
-            "CPF": "33333333333",
-            "address": "33333-333",
-            "phone": "4833333333"
-        },
-        {
-            "name": "Rin",
-            "email": "rin@email.com",
-            "password": "rinpass",
-            "gender": "Female",
-            "birthday": "2004-04-04",
-            "CPF": "44444444444",
-            "address": "44444-444",
-            "phone": "4844444444"
-        },
-        {
-            "name": "Sakura",
-            "email": "sakura@email.com",
-            "password": "sakurapass",
-            "gender": "Female",
-            "birthday": "2005-05-05",
-            "CPF": "55555555555",
-            "address": "55555-555",
-            "phone": "4855555555"
-        }
-    ],
-    "places": [
-      {
-        "name": "Joaquina Beach Dunes",
-        "category": "beach",
-        "description": "Joaquina Beach has the most beautiful dunes...",
-        "cep": "88062-600",
-        "number": "2323",
-        "address": "Av. Pref. Acácio Garibaldi São Thiago",
-        "city": "Florianópolis - SC",
-        "complement": "Hotel nearby the beach and its dunes"
-      },
-      {
-        "name": "Lagoinha do Leste Trail",
-        "category": "hiking",
-        "description": "Lagoinha do Leste is one of the most savage hikings...",
-        "cep": "88066-260",
-        "number": "5278",
-        "address": "Rod. SC-406",
-        "city": "Florianópolis - SC",
-        "complement": "Matadeiro Beach is one of the starting points"
-      },
-      {
-        "name": "Lagoa do Peri Park",
-        "category": "park",
-        "description": "Lago do Peri Park is one of the greenest areas to visit while...",
-        "cep": "88010-102",
-        "number": "3150",
-        "address": "Rod. Francisco Thomaz dos Santos ",
-        "city": "Florianópolis - SC",
-        "complement": "Entrance is close to Morro das Pedras Belvedere"
-      }
-    ]
-  }
+  "users": [
+    {
+      "name": "Altria",
+      "email": "altria@email.com",
+      "password": "altriapass",
+      "gender": "Female",
+      "birthday": "2001-01-01",
+      "CPF": "12345678900",
+      "address": "11111-111",
+      "phone": "4811111111",
+      "id": "680f"
+    },
+    {
+      "name": "Emiya",
+      "email": "emiya@email.com",
+      "password": "emiyapass",
+      "gender": "Male",
+      "birthday": "2002-02-02",
+      "CPF": "22222222222",
+      "address": "22222-222",
+      "phone": "4822222222",
+      "id": "5306"
+    },
+    {
+      "name": "Gilgamesh",
+      "email": "gilgamesh@email.com",
+      "password": "gilgameshpass",
+      "gender": "Male",
+      "birthday": "2003-03-03",
+      "CPF": "33333333333",
+      "address": "33333-333",
+      "phone": "4833333333",
+      "id": "41b0"
+    },
+    {
+      "name": "Rin",
+      "email": "rin@email.com",
+      "password": "rinpass",
+      "gender": "Female",
+      "birthday": "2004-04-04",
+      "CPF": "44444444444",
+      "address": "44444-444",
+      "phone": "4844444444",
+      "id": "a9db"
+    },
+    {
+      "name": "Sakura",
+      "email": "sakura@email.com",
+      "password": "sakurapass",
+      "gender": "Female",
+      "birthday": "2005-05-05",
+      "CPF": "55555555555",
+      "address": "55555-555",
+      "phone": "4855555555",
+      "id": "7891"
+    },
+    {
+      "id": "a73d",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "a054",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "5b32",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "6778",
+      "name": "Shirou",
+      "email": "shirou@email.com",
+      "password": "shiroupass",
+      "gender": "Male",
+      "birthday": "2005-05-05",
+      "cpf": "55555555555",
+      "address": "Rua Francisca Luiza Vieira",
+      "phone": "4855555555"
+    }
+  ],
+  "places": [
+    {
+      "name": "Joaquina Beach Dunes",
+      "category": "beach",
+      "description": "Joaquina Beach has the most beautiful dunes...",
+      "cep": "88062-600",
+      "number": "2323",
+      "address": "Av. Pref. Acácio Garibaldi São Thiago",
+      "city": "Florianópolis - SC",
+      "complement": "Hotel nearby the beach and its dunes",
+      "id": "ccac"
+    },
+    {
+      "name": "Lagoinha do Leste Trail",
+      "category": "hiking",
+      "description": "Lagoinha do Leste is one of the most savage hikings...",
+      "cep": "88066-260",
+      "number": "5278",
+      "address": "Rod. SC-406",
+      "city": "Florianópolis - SC",
+      "complement": "Matadeiro Beach is one of the starting points",
+      "id": "0c57"
+    },
+    {
+      "name": "Lagoa do Peri Park",
+      "category": "park",
+      "description": "Lago do Peri Park is one of the greenest areas to visit while...",
+      "cep": "88010-102",
+      "number": "3150",
+      "address": "Rod. Francisco Thomaz dos Santos ",
+      "city": "Florianópolis - SC",
+      "complement": "Entrance is close to Morro das Pedras Belvedere",
+      "id": "a2d4"
+    },
+    {
+      "id": "a1ce",
+      "name": "Campeche Island",
+      "category": "other",
+      "description": "Campeche Island is one of the most trendy places to visit while enjoying a trip to Florianópolis...",
+      "cep": "88063198",
+      "number": "",
+      "address": "Rua Lomba do Sabão",
+      "city": "Florianópolis",
+      "complement": "Beach close to Campeche Island where you can get a boat and enjoy the ride :)",
+      "latitude": "-27.6969423",
+      "longitude": "-48.4909268"
+    }
+  ]
+}
