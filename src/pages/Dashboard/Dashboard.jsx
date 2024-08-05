@@ -1,27 +1,43 @@
 import { useEffect, useState } from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import Dashlist from '../../components/Dashlist/Dashlist';
+import Card from '../../components/Card/Card';
 import { UsersRound, MapPinned } from 'lucide-react';
 import styles from './Dashboard.module.css';
 
 function Dashboard() {
+    const [userCount, setUserCount] = useState(0);
+    const [placeCount, setPlaceCount] = useState(0);
 
-    const [list, setList] = useState([]);
+    async function fetchUserCount() {
+        try {
+            const response = await fetch('http://localhost:3000/users');
+            if (!response.ok) {
+                throw new Error('No network response');
+            }
+            const data = await response.json();
+            setUserCount(data.length);
+        } catch (error) {
+            console.log('Failed to fetch user count', error);
+        }
+    }
 
-    async function loadPlaces() {
+    async function fetchPlaceCount() {
         try {
             const response = await fetch('http://localhost:3000/places');
             if (!response.ok) {
                 throw new Error('No network response');
             }
             const data = await response.json();
-            setList(data);
+            setPlaceCount(data.length);
         } catch (error) {
-            console.log('Failed to fetch places', error);
+            console.log('Failed to fetch place count', error);
         }
     }
 
     useEffect(() => {
-        loadPlaces()
+        fetchUserCount();
+        fetchPlaceCount();
     }, []);
 
     return (
@@ -32,43 +48,13 @@ function Dashboard() {
                 <p>Welcome aboard!</p>
 
                     <div className={styles.cardsContainer}>
-                        <div className={styles.cardUsers}>
-                            <h2>Users</h2>
-                        </div>
-                        <div className={styles.cardPlaces}>
-                            <h2>Places</h2>
-                        </div>
-                        {/* <Card title="Users" total={0} iconElement={UsersRound} />
-                        <Card title="Places" total={0} iconElement={MapPinned} /> */}
+                        <Card title="Guides" total={0} iconElement={UsersRound} />
+                        <Card title="Places" total={0} iconElement={MapPinned} />
                     </div>
 
                     <div className={styles.listContainer}>
-                        <h3>List of Places</h3>
-                        <div>
-
-                    {/* <table border="1">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Local</th>
-                                <th>User</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        {
-                            list.map((place) => (
-                                <tr key={user.id}>
-                                    <td>{user.id}</td>
-                                    <td>{user.id}</td>
-                                    <td>{place.name}</td>
-                                    <td>{user.name}</td>
-                                </tr>
-                            ))
-                        }
-                        </tbody>
-                    </table> */}
-                </div>
+                    <h3>Check out the connections available to explore:</h3>
+                    <Dashlist />
                 </div>
             </main>
         </div>

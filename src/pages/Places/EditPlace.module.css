@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex: 1;
+    height: 100vh; 
+    overflow: hidden; /* Don't pass the height */
+}
+
+.placesContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin: 0 auto;
+    overflow-y: auto; /* Vertical scroll */
+    padding-right: 80px;
+}
+
+.placesContainer h1 {
+    color: #cbcae0;
+    margin: 10px 0 20px 0;
+    text-align: left;
+}
+
+.placesForm {
+    display: flex;
+    flex-direction: column;
+    background-color: #586fdf;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70vw;
+    margin-left: 20px;
+    border-left: 5px dashed #cbcae0;
+    overflow-y: auto; 
+    max-height: 100%; 
+}
+
+.placesForm h2 {
+    color: #cbcae0;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: left;
+}
+
+.placesForm p {
+    color: #cbcae0;
+    margin-bottom: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+  
+.placesGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.placesGroup label {
+    margin: 10px 0 5px;
+    color: #cbcae0;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: left;
+}
+  
+.placesInput {
+    padding: 10px;
+    margin-bottom: 5px;
+    outline: none;
+    background: #cbcae0;
+    color: #b65987;
+    border: 1px solid #cbcae0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    &::placeholder {
+        color: #586fdf;
+        font-style: italic;
+    }
+}
+
+.placesInput:focus {
+    border-color: #b65987;
+    box-shadow: 0 0 4px 2px #b65987;
+}
+
+.placesGrid {
+    display: flex;
+    gap: 20px;
+}
+  
+.error {
+    color: #b65987;
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: italic;
+}  
+  
+.successMessage {
+    color: #cbcae0;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+  
+.updateButton {
+    align-self: flex-end;
+    padding: 15px;
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    background-color: #b65987;
+    color: #cbcae0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.updateButton:hover {
+    background-color: #475bb5;
+}

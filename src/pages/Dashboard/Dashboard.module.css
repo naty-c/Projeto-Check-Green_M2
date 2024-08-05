@@ -27,33 +27,11 @@
 
 .cardsContainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-left: 300px;
+    margin-left: 280px;
     gap: 30px;
-}
-
-.cardUsers {
-    background: #b65987;
-    width: 350px;
-    height: 150px;
-    border-radius: 5px;
-}
-
-.cardUsers h2,
-.cardPlaces h2 {
-    color: #cbcae0;
-    margin-top: 10px;
-    margin-left: 10px;
-    text-align: left;
-}
-
-.cardPlaces {
-    background: #b65987;
-    width: 350px;
-    height: 150px;
-    border-radius: 5px;
 }
 
 .listContainer {

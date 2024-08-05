@@ -14,17 +14,20 @@ function AppRoutes() {
             {/* Public Routes */}
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            {/* <Route path="/dashboard" element={<Dashboard />}/>
+            <Route path="/users" element={<Users />} />
+            <Route path="/places" element={<Places />} /> */}
 
             {/* Private Routes */}
             <Route element={<PrivateRoute />}>
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />}/>
                 <Route path="/users" element={<Users />} />
                 <Route path="/places" element={<Places />} />
-                <Route path="/add-places" element={<AddPlaces />} />
-                <Route path="/edit-place/:id" element={<EditPlace />} />
+                <Route path="/places/add-places" element={<AddPlaces />} />
+                <Route path="/places/edit-place" element={<EditPlace />} />
             </Route>
         </Routes>
-    );
-}
+    )
+} 
 
 export default AppRoutes;
