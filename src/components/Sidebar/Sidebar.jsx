@@ -9,8 +9,8 @@ function Sidebar() {
                     <h2>Check Green</h2> 
                     <div className={styles.sidebarLinks}>
                     <ul>
-                        <li><Link to="/dashboard" className={styles.link}><House />Dashboard</Link></li>
-                        <li><Link to="/users" className={styles.link}><User />Users</Link></li>
+                        <li><Link to="/dashboard" className={styles.link}><House />Lounge</Link></li>
+                        <li><Link to="/users" className={styles.link}><User />Guides</Link></li>
                         <li><Link to="/places" className={styles.link}><LandPlot />Places</Link></li>
                     </ul>
                     </div>

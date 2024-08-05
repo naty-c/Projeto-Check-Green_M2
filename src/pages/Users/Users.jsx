@@ -9,7 +9,7 @@ function Users() {
       <Sidebar />
       
     <main className={styles.usersContainer}>
-        <h1>Users</h1>
+        <h1>Guides</h1>
         <p>Coming soon, after planning the next trip... <SmilePlus /></p>
       </main>
     </div>
