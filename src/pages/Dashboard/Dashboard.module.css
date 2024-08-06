@@ -46,3 +46,22 @@
     margin-left: 300px;
     text-align: left;
 }
+
+.mainView {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 300px;
+    margin-top: 20px;
+    color: #586fdf;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #b65987;
+}
+
+.active {
+    color: #007bff; 
+}

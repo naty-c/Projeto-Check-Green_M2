@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import getAddressFromCep from '../../service/addressService';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import { Plane } from 'lucide-react';
+import { Plane, Undo2 } from 'lucide-react';
 import styles from './AddPlaces.module.css';
 import axios from 'axios';
 
@@ -65,7 +65,6 @@ function AddPlaces() {
   return (
     <div className={styles.container}>
       <Sidebar />
-
       <main className={styles.placesContainer}>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.placesForm}>
           {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
@@ -200,7 +199,11 @@ function AddPlaces() {
             <p className={styles.error}>{errors.complement?.message}</p>
           </div>
 
-          <button type="submit" className={styles.addButton}><Plane size={32} /></button>
+          <div className={styles.buttonContainer}>
+            <button type="submit" className={styles.addButton}><Plane size={32} /></button>
+            <button className={styles.returnButton} onClick={() => navigate(-1)}><Undo2 size={32} /></button>
+          </div>
+
         </form>
       </main>
     </div>

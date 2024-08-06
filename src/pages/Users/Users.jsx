@@ -11,7 +11,7 @@ function Users() {
     <main className={styles.usersContainer}>
         <h1>Guides</h1>
         <p>Coming soon, after planning the next trip... <SmilePlus /></p>
-      </main>
+    </main>
     </div>
   );
 };

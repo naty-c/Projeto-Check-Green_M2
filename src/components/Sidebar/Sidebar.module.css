@@ -38,6 +38,8 @@
     text-decoration: none;
     color: #cbcae0;
     cursor: pointer;
+    background-color: #586fdf;
+    border: none;
 }
 
 .link:hover,
@@ -47,6 +49,14 @@
 
 .link:active {
   color: #c47493;
+}
+
+.link:active {
+    color: #c47493;
+}
+
+.activeLink {
+    color: #b65987; 
 }
 
 .sidebarLogout {

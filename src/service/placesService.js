@@ -17,6 +17,7 @@ export const updatePlace = async (id, updatedData) => {
 export const deletePlace = async (id) => {
     try {
         await axios.delete(`${API_URL}/${id}`);
+        return 'Place successfully removed';
     } catch (error) {
         console.error('Error deleting place:', error);
         throw error;

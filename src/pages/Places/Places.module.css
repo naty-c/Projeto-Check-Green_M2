@@ -68,3 +68,7 @@
 .icon:hover {
     color: #b65987;
 }
+
+.active {
+    color: #007bff; 
+}
