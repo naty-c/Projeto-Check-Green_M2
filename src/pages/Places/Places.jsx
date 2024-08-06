@@ -1,11 +1,15 @@
+import 'leaflet/dist/leaflet.css';
+import Map from '../../components/Map/Map';
 import Placelist from '../../components/Placelist/Placelist';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import BackButton from '../../components/Button/BackButton';
 import { PartyPopper, TableProperties, MapPinned } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Places.module.css';
 
 function Places() {
-
+    const [viewMode, setViewMode] = useState('list');
     return (
     
         <div className={styles.container}>
@@ -21,11 +25,18 @@ function Places() {
                     </div>
                 </div>
                 <div className={styles.mainView}>
-                    <TableProperties className={styles.icon} />
-                    <MapPinned className={styles.icon} />
+                    <TableProperties 
+                    className={`${styles.icon} ${viewMode === 'list' ? styles.active : ''}`}
+                    onClick={() => setViewMode('list')}
+                    />
+                    <MapPinned 
+                    className={`${styles.icon} ${viewMode === 'map' ? styles.active : ''}`}
+                    onClick={() => setViewMode('map')}
+                    />
+                    <BackButton />
                 </div>
                 <div>
-                    <Placelist />
+                    {viewMode === 'list' ? <Placelist /> : <Map />}
                 </div>
             </main>
         </div>
@@ -33,4 +44,5 @@ function Places() {
 }
 
 export default Places;
+
 

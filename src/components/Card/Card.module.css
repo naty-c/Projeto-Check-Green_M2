@@ -38,4 +38,5 @@
     font-size: 2rem;
     margin: 0;
     text-shadow: 1px 1px 6px #cbcae0;
+    -webkit-text-stroke: 2px #cbcae0;
 }

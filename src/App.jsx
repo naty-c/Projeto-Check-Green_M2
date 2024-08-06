@@ -6,7 +6,6 @@ import AppRoutes from './routes/Routes';
 function App() {
   return (
     <>
-
       <BrowserRouter>
         <AuthProvider>
           <AppRoutes />

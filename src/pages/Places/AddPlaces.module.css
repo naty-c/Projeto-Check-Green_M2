@@ -99,6 +99,12 @@
     font-size: 1em;
     margin-bottom: 10px;
 }
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
   
 .addButton {
     align-self: flex-end;
@@ -113,5 +119,21 @@
 }
   
 .addButton:hover {
+    background-color: #475bb5;
+}
+
+.returnButton {
+    align-self: flex-start;
+    padding: 15px 5px;
+    width: 10%;
+    border: none;
+    border-radius: 4px;
+    background-color: #b65987;
+    color: #cbcae0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.returnButton:hover {
     background-color: #475bb5;
 }

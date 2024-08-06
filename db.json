@@ -80,6 +80,11 @@
       "cpf": "55555555555",
       "address": "Rua Francisca Luiza Vieira",
       "phone": "4855555555"
+    },
+    {
+      "id": "a4c6",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
     }
   ],
   "places": [

@@ -4,9 +4,10 @@ import { Pencil, Trash2 } from 'lucide-react';
 import { deletePlace } from '../../service/placesService';
 import styles from './Placelist.module.css';
 
-function List() {
+function Placelist() {
     const [places, setPlaces] = useState([]);
     const [users, setUsers] = useState([]);
+    const [successMessage, setSuccessMessage] = useState('');
 
     async function loadPlaces() {
         try {
@@ -37,7 +38,9 @@ function List() {
     async function handleDelete(id) {
         if (window.confirm('Are you sure you want to delete this place?')) {
             try {
-                await deletePlace(id);
+                const message = await deletePlace(id);
+                setSuccessMessage(message);
+                alert('Place successfully removed!');
                 setPlaces(places.filter(place => place.id !== id));
             } catch (error) {
                 console.error('Error deleting place', error);
@@ -87,8 +90,9 @@ function List() {
                 </tbody>
 
             </table>
+            {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
         </div>
     )
 }
 
-export default List;
+export default Placelist;

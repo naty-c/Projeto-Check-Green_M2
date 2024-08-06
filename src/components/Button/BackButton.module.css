@@ -1,0 +1,15 @@
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 110px;
+    cursor: pointer;
+    font-size: 24px; 
+    color: #586fdf; 
+    transition: color 0.3s;
+}
+
+.backBtn:hover {
+    color: #b65987; 
+}
