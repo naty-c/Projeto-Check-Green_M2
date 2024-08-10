@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import Map from '../../components/Map/Map';
+import DashboardMap from '../../components/Map/DashboardMap';
 import { useEffect, useState } from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Dashlist from '../../components/Dashlist/Dashlist';
@@ -44,34 +44,37 @@ function Dashboard() {
     }, []);
 
     return (
-        <div className={styles.dashboardContainer}>
-            <Sidebar />
-            <main className={styles.mainContent}>
-                <h1>Lounge</h1>
-                <p>Welcome aboard!</p>
-                    <div className={styles.cardsContainer}>
-                        <Card title="Guides" total={0} iconElement={UsersRound} />
-                        <Card title="Places" total={0} iconElement={MapPinned} />
-                    </div>
+            <div className={styles.dashboardContainer}>
+                <div className={styles.dashboardMenu}>
+                <Sidebar />
+                </div>
+                <main className={styles.mainContent}>
+                    <h1>Lounge</h1>
+                    <p>Welcome aboard!</p>
 
-                    <div className={styles.listContainer}>
-                        <h3>Check out the spots available to explore:</h3>
-                    <div className={styles.mainView}>
-                    <TableProperties 
-                    className={`${styles.icon} ${viewMode === 'list' ? styles.active : ''}`}
-                    onClick={() => setViewMode('list')}
-                    />
-                    <MapPinned 
-                    className={`${styles.icon} ${viewMode === 'map' ? styles.active : ''}`}
-                    onClick={() => setViewMode('map')}
-                    />
-                </div>
-                <div>
-                    {viewMode === 'list' ? <Dashlist /> : <Map />}
-                </div>
-                </div>
-            </main>
-        </div>
+                        <div className={styles.cardsContainer}>
+                            <Card title="Guides" total={0} iconElement={UsersRound} />
+                            <Card title="Places" total={0} iconElement={MapPinned} />
+                        </div>
+
+                        <div className={styles.listContainer}>
+                            <h4>Check out the spots available to explore:</h4>
+                            <div className={styles.mainView}>
+                            <TableProperties 
+                            className={`${styles.icon} ${viewMode === 'list' ? styles.active : ''}`}
+                            onClick={() => setViewMode('list')}
+                            />
+                            <MapPinned 
+                            className={`${styles.icon} ${viewMode === 'map' ? styles.active : ''}`}
+                            onClick={() => setViewMode('map')}
+                            />
+                            </div>
+                        </div>
+                        <div className={styles.alternateView}>
+                            {viewMode === 'list' ? <Dashlist /> : <DashboardMap />}
+                        </div>
+                </main>
+            </div>
     );
 }
 

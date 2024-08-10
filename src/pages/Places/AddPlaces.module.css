@@ -137,3 +137,125 @@
 .returnButton:hover {
     background-color: #475bb5;
 }
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .placesContainer {
+        padding-right: 5px;
+    }
+
+    .placesForm {
+        width: 85vw;
+        margin-left: 5px;
+        padding: 15px;
+    }
+
+    .placesForm h1 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .placesForm h2 {
+        font-size: 1.2rem;
+    }
+
+    .placesForm p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .placesGrid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .placesGroup {
+        margin: 0;
+    }
+
+    .buttonContainer {
+        gap: 10px;
+    }
+
+    .addButton {
+        width: 80%;
+    }
+
+    .returnButton {
+        width: 20%;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .placesContainer {
+        padding-right: 20px;
+    }
+
+    .placesForm {
+        width: 80vw;
+        margin-left: 10px;
+        padding: 20px;
+    }
+
+    .placesForm h1 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    .placesForm h2 {
+        font-size: 1.4rem;
+    }
+
+    .placesForm p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .placesGrid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .placesGroup {
+        margin: 0;
+    }
+
+    .addButton {
+        width: 50%;
+    }
+
+    .returnButton {
+        width: 20%;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .placesContainer {
+        padding-right: 40px;
+    }
+
+    .placesForm {
+        width: 70vw;
+        margin-left: 20px;
+        padding: 25px;
+    }
+
+    .placesForm h1 {
+        font-size: 2rem;
+    }
+
+    .placesForm h2 {
+        font-size: 1.6rem;
+    }
+
+    .placesForm p {
+        font-size: 1.1rem;
+    }
+
+    .placesGrid {
+        flex-direction: row;
+        gap: 20px;
+    }
+}

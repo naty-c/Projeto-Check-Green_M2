@@ -162,4 +162,108 @@
     font-family: "Josefin Sans", sans-serif;
 }  
 
+/* Media Queries for resposiveness */
+
+/* Mobile devices (less than 480px) */
+@media (max-width: 480px) {
+    .loginContainer {
+        display: block;
+        margin-top: 10em;
+        background-size: auto;
+    }
+
+    .right {
+        padding: 10px;
+    }
+
+    .right fieldset {
+        padding: 15px;
+    }
+
+    .left h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+    }
+
+    .left p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5em;
+    }
+
+    .box {
+        margin-bottom: 1em;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .left {
+        padding: 30px;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .left p {
+        font-size: 1rem;
+    }
+
+    .right h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .left {
+        padding: 50px;
+    }
+
+    .right {
+        padding: 30px;
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+    }
+
+    .left p {
+        font-size: 1.25rem;
+    }
+
+    .right h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Big screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .left {
+        padding: 60px;
+    }
+
+    .right {
+        padding: 40px;
+    }
+}
+
+/* High resolution screens (1201px and more) */
+@media (min-width: 1201px) {
+    .loginContainer {
+        flex-direction: row;
+    }
+
+    .left {
+        padding: 70px;
+    }
+
+    .right {
+        padding: 50px;
+    }
+}
   

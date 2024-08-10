@@ -20,18 +20,18 @@ function Sidebar() {
                     <div className={styles.sidebarLinks}>
                     <ul>
                         <li><Link to="/dashboard" 
-                            className={`${styles.link} ${isActive('/dashboard') ? styles.activeLink : ''}`}><House />Lounge</Link></li>
+                            className={`${styles.link} ${isActive('/dashboard') ? styles.activeLink : ''}`}><House /><span>Lounge</span></Link></li>
                         <li><Link to="/users" 
-                            className={`${styles.link} ${isActive('/users') ? styles.activeLink : ''}`}><User />Guides</Link></li>
+                            className={`${styles.link} ${isActive('/users') ? styles.activeLink : ''}`}><User /><span>Guides</span></Link></li>
                         <li><Link to="/places" 
-                            className={`${styles.link} ${isActive('/places') ? styles.activeLink : ''}`}><LandPlot />Places</Link></li>
+                            className={`${styles.link} ${isActive('/places') ? styles.activeLink : ''}`}><LandPlot /><span>Places</span></Link></li>
                     </ul>
                     </div>
                     <div className={styles.sidebarLogout}>
                     <ul>
                         <li>
                             <button onClick={handleLogout} className={styles.link}>
-                                <LogOut />Land
+                                <LogOut /><span>Land</span>
                             </button>
                         </li>
                     </ul>

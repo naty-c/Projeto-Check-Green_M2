@@ -40,3 +40,17 @@
     text-shadow: 1px 1px 6px #cbcae0;
     -webkit-text-stroke: 2px #cbcae0;
 }
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .card {
+        width: 350px;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 350px;
+    }
+}

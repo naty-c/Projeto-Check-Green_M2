@@ -4,11 +4,12 @@ import { useForm } from 'react-hook-form';
 import { updatePlace } from '../../service/placesService';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import getAddressFromCep from '../../service/addressService';
+import { Undo2 } from 'lucide-react';
 import styles from './EditPlace.module.css';
 
 function EditPlace() {
     const { id } = useParams();
-    const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
+    const { register, handleSubmit, reset, formState: { errors }, setValue, watch } = useForm();
     const [successMessage, setSuccessMessage] = useState('');
     const navigate = useNavigate();
 
@@ -216,8 +217,10 @@ function EditPlace() {
                 />
                 <p className={styles.error}>{errors.complement?.message}</p>
             </div>
-
-            <button type="submit" className={styles.updateButton}>Update</button>
+            <div className={styles.buttonContainer}>
+                <button type="submit" className={styles.updateButton}>Update</button>
+                <button type="button" className={styles.returnButton} onClick={() => navigate(-1)}><Undo2 size={15} /></button>
+            </div>
                 </form>
             </main>
             </div>

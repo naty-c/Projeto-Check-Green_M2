@@ -85,6 +85,11 @@
       "id": "a4c6",
       "email": "shirou@email.com",
       "password": "shiroupass"
+    },
+    {
+      "id": "c715",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
     }
   ],
   "places": [

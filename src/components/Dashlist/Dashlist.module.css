@@ -1,8 +1,8 @@
 .tableContainer {
-    overflow-x: auto;
-    margin-left: 300px;
+    display: flex;
     margin-top: 20px;
     border-radius: 5px;
+    width: 90%;
 }
 
 table {
@@ -19,7 +19,6 @@ th, td {
 th {
     background-color: #586fdf;
     color: #cbcae0;
-    /* border-color: #cbcae0; */
 }
 
 td {
@@ -34,4 +33,28 @@ td:nth-child(2) {
 
 th:nth-child(1) {
     border-right-color: #cbcae0;
+}
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .tableContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .tableContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tableContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
