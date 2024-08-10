@@ -1,10 +1,7 @@
 .tableContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin: 20px 100px 0 300px;
     border-radius: 5px;
+    width: 88%;
 }
 
 table {
@@ -75,4 +72,30 @@ td:nth-child(4) {
     color: #cbcae0;
     font-size: 1em;
     margin-bottom: 10px;
+}
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .tableContainer {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .tableContainer {
+        width: 100%;
+        margin-left: 60px;
+        margin-right: 20px;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tableContainer {
+        width: 100%;
+        margin-right: 50px;
+        margin-left: 10px;
+    }
 }

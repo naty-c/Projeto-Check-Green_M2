@@ -1,16 +1,25 @@
-.container {
+.placesContainer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
+.placesMenu {
+    max-width: 250px;
+    flex: auto;
+    transition: transform 0.3s ease;
+}
+
 .mainContent {
+    flex: 3;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    overflow: auto;
 }
 
 .mainHeader {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -19,20 +28,22 @@
     margin-top: 30px;
     color: #586fdf;
     text-align: left;
-    margin-left: 300px;
+    width: 100%;
+    margin-left: 80px;
+
 }
 
 .mainText {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
   
 .mainText p {
     margin-top: 10px;
-    margin-left: 300px;
-    text-align: left;
     color: #586fdf;
+    margin-left: 40px;
 }
 
 .iconParty {
@@ -40,7 +51,6 @@
 }
 
 .mainText button {
-    margin-right: 100px;
     background: #b65987;
     border: none;
     border-radius: 5px;
@@ -48,6 +58,7 @@
     color: #cbcae0;
     cursor: pointer;
     font-size: 1rem;
+    margin-right: 140px;
 }
 
 .mainText button:hover {
@@ -58,11 +69,17 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-left: 300px;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
     color: #586fdf;
     font-family: "Josefin Sans", sans-serif;
     cursor: pointer;
+}
+
+.alternateView {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 .icon:hover {
@@ -71,4 +88,126 @@
 
 .active {
     color: #007bff; 
+}
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .placesMenu {
+        max-width: 60px;
+    }
+
+    .mainHeader h1 {
+        font-size: 2rem;
+        margin-left: 60px;
+    }
+
+    .mainText {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .mainText p {
+        margin-left: 30px;
+    }
+
+    .mainText button {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        margin-right: 250px;
+    }
+
+    .mainView {
+        margin-left: 35px;
+        margin-top: 20px;
+        gap: 5px;
+    }
+
+    .alternateView {
+        margin-left: 35px;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .placesContainer {
+        flex-direction: column;
+    }
+
+    .placesMenu {
+        max-width: 80px;
+        order: 1;
+    }
+
+    .mainContent {
+        overflow: hidden;
+    }
+
+    .mainHeader {
+        align-items: flex-start;
+    }
+
+    .mainHeader h1 {
+        margin-left: 100px;
+        font-size: 2.5rem;
+    }
+
+    .mainText {
+        flex-direction: column;
+        margin-left: 100px;
+        align-items: flex-start;
+    }
+
+    .mainText p {
+        margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .mainText button {
+        margin-right: 0;
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    .mainView {
+        margin-left: 100px;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .alternateView {
+        margin-left: 40px;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mainHeader h1 {
+        margin-left: 100px;
+        font-size: 2.5rem;
+    }
+
+    .mainText {
+        margin-left: 100px;
+    }
+
+    .mainText p {
+        margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .mainText button {
+        margin-right: 100px;
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    .mainView {
+        margin-left: 50px;
+        margin-top: 20px;
+        gap: 5px;
+    }
 }

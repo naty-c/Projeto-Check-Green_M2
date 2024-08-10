@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    margin-right: 110px;
+    margin-right: 140px;
     cursor: pointer;
     font-size: 24px; 
     color: #586fdf; 
@@ -12,4 +12,32 @@
 
 .backBtn:hover {
     color: #b65987; 
+}
+
+/* Mobile devices with 390px */
+@media (max-width: 390px) {
+    .backBtn {
+        margin-right: 20px;
+    }
+}
+
+/* Mobile devices with screen smaller than 480px */
+@media (max-width: 480px) {
+    .backBtn {
+        margin-right: 40px;
+    }
+}
+
+/* Tablets & small screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .backBtn {
+        margin-right: 60px;
+    }
+}
+
+/* Laptops & small screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .backBtn {
+        margin-right: 65px;
+    }
 }

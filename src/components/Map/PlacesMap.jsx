@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import axios from 'axios';
 import getAddressFromCep from '../../service/addressService';
-import styles from './Map.module.css';
+import styles from './PlacesMap.module.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { renderToString } from 'react-dom/server';
@@ -46,7 +46,7 @@ function MapMarkers({ places }) {
   );
 };
 
-function Map({ center = [-27.593500, -48.558540], zoom = 13, small = false }) {
+function PlacesMap({ center = [-27.593500, -48.558540], zoom = 13 }) {
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ function Map({ center = [-27.593500, -48.558540], zoom = 13, small = false }) {
     <MapContainer 
       center={center} 
       zoom={zoom} 
-      className={small ? styles.mapContainerSmall : styles.mapContainer}
+      className={styles.mapContainer}
       >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -83,4 +83,4 @@ function Map({ center = [-27.593500, -48.558540], zoom = 13, small = false }) {
   );
 };
 
-export default Map;
+export default PlacesMap;

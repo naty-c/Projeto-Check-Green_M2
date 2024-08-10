@@ -27,3 +27,37 @@
     font-style: italic;
     margin-bottom: 20px;
 }
+
+/* Media Queries */
+
+/* Small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .usersContainer h1 {
+        font-size: 1.8rem; 
+    }
+
+    .usersContainer p {
+        font-size: 0.9rem; 
+        padding-left: 60px; 
+    }
+
+    .usersContainer {
+        background-size: cover; 
+        padding: 10px;
+    }
+}
+
+/* Medium screens (min-width: 481px) and (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .usersContainer h1 {
+        font-size: 2.5rem; 
+    }
+
+    .usersContainer p {
+        font-size: 1rem; 
+    }
+
+    .usersContainer {
+        background-position: center; 
+    }
+}

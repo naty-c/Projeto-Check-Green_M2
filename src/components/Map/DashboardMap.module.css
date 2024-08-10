@@ -1,0 +1,35 @@
+.mapContainer {
+    display: flex;
+    justify-content: center;
+    height: 60vh; 
+    width: 72vw; 
+    position: relative; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+    .mapContainer {
+        height: 40vh; 
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* Media query for tablets & small screens */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mapContainer {
+        height: 25vw; 
+        margin-top: 10px; 
+    }
+}
+
+/* Media query for desktops & big screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mapContainer {
+        height: 33vh; 
+        width: 68vw; 
+    }
+}

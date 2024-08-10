@@ -31,7 +31,7 @@
   
 .left form {
     display: flex;
-    /* flex-direction: column; */
+    flex-wrap: wrap;
 }
 
 .leftSignupForm,
@@ -134,5 +134,48 @@ p {
     font-style: italic;
 }  
 
+/* Media queries for mobile devices */
+@media (max-width: 480px) {
+    .left {
+        width: 100%;
+    }
+    
+    .leftSignupForm,
+    .rightSignupForm {
+        width: 50%;
+    }
 
+}
+
+/* Media queries for tablets & mobile devices */
+@media (min-width: 481px) and (max-width: 768px) {
+    .left {
+        width: 55%;
+    }
+
+    .leftSignupForm,
+    .rightSignupForm {
+        width: 50%;
+    }
+
+    .signupContainer {
+        background-size: auto;
+    }
+}
+
+/* Media queries for small screens & laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .leftSignupForm,
+    .rightSignupForm {
+        width: 50%;
+    }
+}
+
+/* Media queries for desktops e big screens */
+@media (min-width: 1025px) {
+    .leftSignupForm,
+    .rightSignupForm {
+        width: 50%;
+    }
+}
   

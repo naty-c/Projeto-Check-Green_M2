@@ -201,7 +201,7 @@ function AddPlaces() {
 
           <div className={styles.buttonContainer}>
             <button type="submit" className={styles.addButton}><Plane size={32} /></button>
-            <button className={styles.returnButton} onClick={() => navigate(-1)}><Undo2 size={32} /></button>
+            <button type="button" className={styles.returnButton} onClick={() => navigate(-1)}><Undo2 size={32} /></button>
           </div>
 
         </form>
