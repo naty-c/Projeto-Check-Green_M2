@@ -27,7 +27,7 @@ const schema = z.object({
           .nonempty({ message: 'CPF is required' })
           .length(11, { message: 'CPF must be 11 numbers' })
           .refine(value => /^\d+$/.test(value), { message: 'CPF must have a valid format' }),
-          address: z.string()
+    address: z.string()
           .nonempty({ message: 'CEP is required' }),
     phone: z.string()
           .nonempty({ message: 'Phone number is required' })
@@ -50,29 +50,35 @@ function Signup() {
     const validationErrors = await validateUser(data);
 
     if (Object.keys(validationErrors).length > 0) {
-      if (validationErrors.email) {
-        setError('email', { type: 'manual', message: validationErrors.email });
-      }
-      if (validationErrors.cpf) {
-        setError('cpf', { type: 'manual', message: validationErrors.cpf });
-      }
-      if (validationErrors.generalError) {
-        setGeneralError(validationErrors.generalError);
-      }
-      return;
+        if (validationErrors.email) {
+            setError('email', { type: 'manual', message: validationErrors.email });
+        }
+        if (validationErrors.cpf) {
+            setError('cpf', { type: 'manual', message: validationErrors.cpf });
+        }
+        if (validationErrors.generalError) {
+            setGeneralError(validationErrors.generalError);
+        }
+        return;
     }
 
     try {
-      await axios.post('http://localhost:3000/users', data); // Add a new user to db.json
+      const response = await axios.post('http://localhost:3000/users', data); // Add a new user to db.json
+      const createdUserId = response.data.id; 
+  
+      localStorage.setItem('userId', createdUserId); 
+      console.log(localStorage.getItem('userId'));
+
+  
       setSuccessMessage('User successfully onboard!');
       alert('User successfully onboard!');
       navigate('/');
-  } catch (error) {
+    } catch (error) {
       console.error('Error registering user', error.response ? error.response.data : error.message);
-      setGeneralError('Failed to register user', error);
+      setGeneralError('Failed to register user');
       alert('Failed to register user');
+    }
   }
-}
 
   async function handleCep(e) {
     const cep = e.target.value.replace(/\D/g, ''); // Remove any non-digit characters
@@ -176,7 +182,7 @@ function Signup() {
             <div className={styles.signupGroup}>
               <label htmlFor="cpf">CPF:</label>
               <input 
-                type="string"
+                type="text"
                 id="cpf"
                 className={styles.signupInput} 
                 placeholder='CPF...'
