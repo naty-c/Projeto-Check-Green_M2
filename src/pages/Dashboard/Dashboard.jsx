@@ -53,8 +53,8 @@ function Dashboard() {
                     <p>Welcome aboard!</p>
 
                         <div className={styles.cardsContainer}>
-                            <Card title="Guides" total={0} iconElement={UsersRound} />
-                            <Card title="Places" total={0} iconElement={MapPinned} />
+                            <Card title="Guides" total={userCount} iconElement={UsersRound} />
+                            <Card title="Places" total={placeCount} iconElement={MapPinned} />
                         </div>
 
                         <div className={styles.listContainer}>

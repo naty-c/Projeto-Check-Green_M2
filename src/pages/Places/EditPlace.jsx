@@ -25,7 +25,7 @@ function EditPlace() {
             setSuccessMessage('Place successfully updated!');
             alert('Place successfully updated!');
             setTimeout(() => {
-                navigate('/dashboard/places');
+                navigate('/places');
             }, 2000); // Redirect after 2 seconds
         } catch (error) {
             console.error('Error updating place', error.response ? error.response.data : error.message);

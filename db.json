@@ -36,7 +36,7 @@
     {
       "name": "Rin",
       "email": "rin@email.com",
-      "password": "rinpass",
+      "password": "rinrinpass",
       "gender": "Female",
       "birthday": "2004-04-04",
       "CPF": "44444444444",
@@ -56,21 +56,6 @@
       "id": "7891"
     },
     {
-      "id": "a73d",
-      "email": "altria@email.com",
-      "password": "altriapass"
-    },
-    {
-      "id": "a054",
-      "email": "altria@email.com",
-      "password": "altriapass"
-    },
-    {
-      "id": "5b32",
-      "email": "altria@email.com",
-      "password": "altriapass"
-    },
-    {
       "id": "6778",
       "name": "Shirou",
       "email": "shirou@email.com",
@@ -82,14 +67,37 @@
       "phone": "4855555555"
     },
     {
-      "id": "a4c6",
-      "email": "shirou@email.com",
-      "password": "shiroupass"
+      "id": "2be6",
+      "name": "Medea",
+      "email": "medea@email.com",
+      "password": "medeapass",
+      "gender": "Female",
+      "birthday": "2007-07-07",
+      "cpf": "77777777777",
+      "address": "Rua Manoel Severino de Oliveira",
+      "phone": "4877777777"
     },
     {
-      "id": "c715",
-      "email": "shirou@email.com",
-      "password": "shiroupass"
+      "id": "f007",
+      "name": "Illya",
+      "email": "illya@email.com",
+      "password": "illyapass",
+      "gender": "Female",
+      "birthday": "2008-08-08",
+      "cpf": "88888888888",
+      "address": "Avenida Jornalista Rubens de Arruda Ramos",
+      "phone": "4888888888"
+    },
+    {
+      "id": "3da2",
+      "name": "Shinji",
+      "email": "shinji@email.com",
+      "password": "shinjipass",
+      "gender": "Male",
+      "birthday": "2009-09-09",
+      "cpf": "99999999999",
+      "address": "Rua Bocaiúva",
+      "phone": "4899999999"
     }
   ],
   "places": [
@@ -138,6 +146,195 @@
       "complement": "Beach close to Campeche Island where you can get a boat and enjoy the ride :)",
       "latitude": "-27.6969423",
       "longitude": "-48.4909268"
+    },
+    {
+      "id": "9b28",
+      "name": "Naufragados Beach Trail",
+      "category": "hiking",
+      "description": "Naufragados Beach is one of the most preserved beaches...",
+      "cep": "88064670",
+      "number": "",
+      "address": "Rua Alberto Cavalheiro",
+      "city": "Florianópolis",
+      "complement": "",
+      "latitude": "-27.7195226",
+      "longitude": "-48.5634788"
+    },
+    {
+      "id": "3d32",
+      "name": "Conceição Lake",
+      "category": "other",
+      "description": "Conceição Lake is one of the most beautiful places in...",
+      "cep": "88062001",
+      "number": "",
+      "address": "Rodovia Admar Gonzaga",
+      "city": "Florianópolis",
+      "complement": "de 3789/3790 ao fim",
+      "latitude": "-27.6010008",
+      "longitude": "-48.4730694",
+      "userId": "2be6"
+    },
+    {
+      "id": "583b",
+      "name": "Morro da Cruz Belvedere",
+      "category": "other",
+      "description": "Morro da Cruz Belvedere offers one the best views from...",
+      "cep": "88025150",
+      "number": "",
+      "address": "Avenida do Antão",
+      "city": "Florianópolis",
+      "complement": "até 799/800",
+      "latitude": "-27.5860885",
+      "longitude": "-48.5364725",
+      "userId": "2be6"
+    },
+    {
+      "id": "4f89",
+      "name": "Hercílio Luz Bridge",
+      "category": "other",
+      "description": "Hercílio Luz Bridge is a postal card...",
+      "cep": "88010400",
+      "number": "",
+      "address": "Praça Quinze de Novembro",
+      "city": "Florianópolis",
+      "complement": "",
+      "latitude": "-27.59763875",
+      "longitude": "-48.54985804631796",
+      "userId": "f007"
+    },
+    {
+      "id": "c8e6",
+      "name": "Tamar Project",
+      "category": "other",
+      "description": "Tamar Project is an example of...",
+      "cep": "88061160",
+      "number": "",
+      "address": "Rua Professor Ademir Francisco",
+      "city": "Florianópolis",
+      "complement": "",
+      "latitude": "-27.5725419",
+      "longitude": "-48.4280812",
+      "userId": "f007"
+    },
+    {
+      "id": "4c76",
+      "name": "Nossa Senhora da Lapa Church",
+      "category": "other",
+      "description": "Nossa Senhora da Lapa Church...",
+      "cep": "88064670",
+      "number": "",
+      "address": "Rua Alberto Cavalheiro",
+      "city": "Florianópolis",
+      "complement": "",
+      "latitude": "-27.7195226",
+      "longitude": "-48.5634788",
+      "userId": "3da2"
+    },
+    {
+      "id": "1155",
+      "name": "Beira Mar Avenue",
+      "category": "other",
+      "description": "Beira Mar Avenue is a great spot for...",
+      "cep": "88010400",
+      "number": "",
+      "address": "Praça Quinze de Novembro",
+      "city": "Florianópolis",
+      "complement": "",
+      "latitude": "-27.59763875",
+      "longitude": "-48.54985804631796",
+      "userId": null
+    }
+  ],
+  "login": [
+    {
+      "id": "655b",
+      "email": "medea@email.com",
+      "password": "medeapass"
+    },
+    {
+      "id": "6c58",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "0d93",
+      "email": "rin@email.com",
+      "password": "rinrinpass"
+    },
+    {
+      "id": "4cb3",
+      "email": "gilgamesh@email.com",
+      "password": "gilgameshpass"
+    },
+    {
+      "id": "d4b4",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "b370",
+      "email": "gilgamesh@email.com",
+      "password": "gilgameshpass"
+    },
+    {
+      "id": "5900",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
+    },
+    {
+      "id": "eaac",
+      "email": "emiya@email.com",
+      "password": "emiyapass"
+    },
+    {
+      "id": "c94d",
+      "email": "medea@email.com",
+      "password": "medeadpass"
+    },
+    {
+      "id": "07f1",
+      "email": "emiya@email.com",
+      "password": "emiyapass"
+    },
+    {
+      "id": "16f8",
+      "email": "illya@email.com",
+      "password": "illyapass"
+    },
+    {
+      "id": "43a0",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "7f10",
+      "email": "medea@email.com",
+      "password": "medeapass"
+    },
+    {
+      "id": "37d7",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
+    },
+    {
+      "id": "80ba",
+      "email": "shinji@email.com",
+      "password": "shinjipass"
+    },
+    {
+      "id": "c02b",
+      "email": "shinji@email.com",
+      "password": "shinjipass"
+    },
+    {
+      "id": "9fb8",
+      "email": "altria@email.com",
+      "password": "altriapass"
+    },
+    {
+      "id": "27ad",
+      "email": "altria@email.com",
+      "password": "altriapass"
     }
   ]
 }

@@ -19,8 +19,16 @@ function AddPlaces() {
   async function onSubmit(data) {
     console.log(data);
 
+    const userId = localStorage.getItem('userId');
+    console.log('userId from localStorage:', userId);
+    
     try {
-      await axios.post('http://localhost:3000/places', data); // Add a new place to db.json
+      const placeData = {
+        ...data,
+        userId: userId
+      };
+
+      await axios.post('http://localhost:3000/places', placeData); // Add a new place to db.json
       setSuccessMessage('Place successfully added!');
       alert('Place successfully added!');
       setTimeout(() => {
