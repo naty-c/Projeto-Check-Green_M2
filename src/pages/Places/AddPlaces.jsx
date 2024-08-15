@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/Auth';
 import getAddressFromCep from '../../service/addressService';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { Plane, Undo2 } from 'lucide-react';
@@ -8,6 +9,7 @@ import styles from './AddPlaces.module.css';
 import axios from 'axios';
 
 function AddPlaces() {
+  const { user } = useAuth();
   const [successMessage, setSuccessMessage] = useState('');
   const [address, setAddress] = useState('');
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm();
@@ -18,24 +20,16 @@ function AddPlaces() {
 
   async function onSubmit(data) {
     console.log(data);
-
-    const userId = localStorage.getItem('userId');
-    console.log('userId from localStorage:', userId);
     
     try {
-      const placeData = {
-        ...data,
-        userId: userId
-      };
-
-      await axios.post('http://localhost:3000/places', placeData); // Add a new place to db.json
+      await axios.post('http://localhost:3000/places', {...data, userId: user.id}); // Add a new place to db.json and connect it to the userId
       setSuccessMessage('Place successfully added!');
       alert('Place successfully added!');
       setTimeout(() => {
           navigate('/dashboard');
       }, 2000); // Redirect after 2 seconds
   } catch (error) {
-      console.error('Error adding place', error.response ? error.response.data : error.message);
+      console.error('Error adding place', error);
       alert('Failed to add place');
   }
 }
