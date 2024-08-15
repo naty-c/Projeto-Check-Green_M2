@@ -56,17 +56,6 @@
       "id": "7891"
     },
     {
-      "id": "6778",
-      "name": "Shirou",
-      "email": "shirou@email.com",
-      "password": "shiroupass",
-      "gender": "Male",
-      "birthday": "2005-05-05",
-      "cpf": "55555555555",
-      "address": "Rua Francisca Luiza Vieira",
-      "phone": "4855555555"
-    },
-    {
       "id": "2be6",
       "name": "Medea",
       "email": "medea@email.com",
@@ -98,6 +87,17 @@
       "cpf": "99999999999",
       "address": "Rua Bocaiúva",
       "phone": "4899999999"
+    },
+    {
+      "id": "99ef",
+      "name": "Shirou",
+      "email": "shirou@email.com",
+      "password": "shiroupass",
+      "gender": "Male",
+      "birthday": "2006-06-06",
+      "cpf": "66666666666",
+      "address": "88062140",
+      "phone": "4866666666"
     }
   ],
   "places": [
@@ -231,18 +231,32 @@
       "userId": "3da2"
     },
     {
-      "id": "1155",
+      "id": "e506",
       "name": "Beira Mar Avenue",
       "category": "other",
       "description": "Beira Mar Avenue is a great spot for...",
-      "cep": "88010400",
+      "cep": "88015902",
       "number": "",
-      "address": "Praça Quinze de Novembro",
+      "address": "Rua Bocaiúva",
       "city": "Florianópolis",
-      "complement": "",
-      "latitude": "-27.59763875",
-      "longitude": "-48.54985804631796",
-      "userId": null
+      "complement": "2468",
+      "latitude": "-27.5862485",
+      "longitude": "-48.5480925",
+      "userId": "99ef"
+    },
+    {
+      "id": "b321",
+      "name": "Lontra Project",
+      "category": "park",
+      "description": "Lontra Project is an inspiring place to learn more about... ",
+      "cep": "88066260",
+      "number": "",
+      "address": "Rodovia Francisco Thomaz dos Santos",
+      "city": "Florianópolis",
+      "complement": "de 2090/2091 a 6850/6851",
+      "latitude": "-27.7517229",
+      "longitude": "-48.5098145",
+      "userId": "99ef"
     }
   ],
   "login": [
@@ -277,11 +291,6 @@
       "password": "gilgameshpass"
     },
     {
-      "id": "5900",
-      "email": "shirou@email.com",
-      "password": "shiroupass"
-    },
-    {
       "id": "eaac",
       "email": "emiya@email.com",
       "password": "emiyapass"
@@ -312,11 +321,6 @@
       "password": "medeapass"
     },
     {
-      "id": "37d7",
-      "email": "shirou@email.com",
-      "password": "shiroupass"
-    },
-    {
       "id": "80ba",
       "email": "shinji@email.com",
       "password": "shinjipass"
@@ -335,6 +339,21 @@
       "id": "27ad",
       "email": "altria@email.com",
       "password": "altriapass"
+    },
+    {
+      "id": "a8f6",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
+    },
+    {
+      "id": "1177",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
+    },
+    {
+      "id": "8a2c",
+      "email": "shirou@email.com",
+      "password": "shiroupass"
     }
   ]
 }

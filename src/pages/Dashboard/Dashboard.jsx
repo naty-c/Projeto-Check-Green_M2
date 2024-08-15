@@ -5,12 +5,14 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import Dashlist from '../../components/Dashlist/Dashlist';
 import Card from '../../components/Card/Card';
 import { UsersRound, MapPinned, TableProperties } from 'lucide-react';
+import { useAuth } from '../../contexts/Auth';
 import styles from './Dashboard.module.css';
 
 function Dashboard() {
     const [userCount, setUserCount] = useState(0);
     const [placeCount, setPlaceCount] = useState(0);
     const [viewMode, setViewMode] = useState('list');
+    const { user } = useAuth();
 
     async function fetchUserCount() {
         try {
@@ -50,7 +52,7 @@ function Dashboard() {
                 </div>
                 <main className={styles.mainContent}>
                     <h1>Lounge</h1>
-                    <p>Welcome aboard!</p>
+                    <p>Welcome aboard, {user?.name || ''}!</p>
 
                         <div className={styles.cardsContainer}>
                             <Card title="Guides" total={userCount} iconElement={UsersRound} />

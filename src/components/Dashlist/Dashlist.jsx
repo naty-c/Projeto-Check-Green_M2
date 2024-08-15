@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from './Dashlist.module.css'; 
+import { useAuth } from "../../contexts/Auth";
 
 function Dashlist() {
     const [places, setPlaces] = useState([]);
     const [users, setUsers] = useState([]);
+    const { user } = useAuth();
 
     async function loadPlaces() {
         try {
@@ -36,6 +38,20 @@ function Dashlist() {
         loadUsers();
     }, []);
 
+    const placeData = places.map(place => {
+        // Check if the current place belongs to the logged-in user
+        if (user && user.id === place.userId) {
+            return { ...place, guideName: user.name };
+        }
+
+        // Find the corresponding user from the users array
+        const guide = users.find(u => u.id === place.userId);
+        return {
+            ...place,
+            guideName: guide ? guide.name : 'Admin'
+        };
+    });
+
     return (
         <div className={styles.tableContainer}>
             <table border="1">
@@ -48,16 +64,13 @@ function Dashlist() {
                 </thead>
 
                 <tbody>
-                {places.map(place => {
-                        const user = users.find(user => user.id === place.userId);
-                        return (
+                {placeData.map(place => (
                             <tr key={place.id}>
                                 {/* <td>{place.id}</td> */}
                                 <td>{place.name}</td>
-                                <td>{user ? user.name : 'Admin'}</td>
+                                <td>{place.guideName}</td>
                         </tr>
-                    );
-                })}
+                ))}
                 </tbody>
                 
             </table>

@@ -7,6 +7,7 @@ import { validateUser } from '../../service/userValidate';
 import getAddressFromCep from '../../service/addressService';
 import styles from './Signup.module.css';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 // Validation with Zod
 const schema = z.object({
@@ -37,17 +38,22 @@ const schema = z.object({
 function Signup() {
   const { register, handleSubmit, setValue, setError, formState: { errors } } = useForm({
     resolver: zodResolver(schema),
-  });
-
-  const [generalError, setGeneralError] = useState('');
+});
 
   const [successMessage, setSuccessMessage] = useState('');
+  const [generalError, setGeneralError] = useState('');
   const navigate = useNavigate();
 
   async function onSubmit(data) {
     console.log(data);
 
-    const validationErrors = await validateUser(data);
+    const userId = uuidv4();
+    const userData = {
+      id: userId,
+      ...data
+    };
+
+    const validationErrors = await validateUser(userData);
 
     if (Object.keys(validationErrors).length > 0) {
         if (validationErrors.email) {
@@ -63,18 +69,13 @@ function Signup() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/users', data); // Add a new user to db.json
-      const createdUserId = response.data.id; 
-  
-      localStorage.setItem('userId', createdUserId); 
-      console.log(localStorage.getItem('userId'));
-
-  
+      await axios.post('http://localhost:3000/users', data); // Add a new user to db.json
+      
       setSuccessMessage('User successfully onboard!');
       alert('User successfully onboard!');
       navigate('/');
     } catch (error) {
-      console.error('Error registering user', error.response ? error.response.data : error.message);
+      console.error('Error registering user', error);
       setGeneralError('Failed to register user');
       alert('Failed to register user');
     }
